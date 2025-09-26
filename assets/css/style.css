@@ -38,3 +38,14 @@
 .site-header nav a:hover {
   text-decoration: underline;
 }
+.site-main {
+  padding: 20px;     
+}
+
+.site-main h2 {
+  margin-top: 0;      
+}
+
+.site-main p {
+  line-height: 1.5;  
+}
