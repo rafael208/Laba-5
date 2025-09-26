@@ -8,3 +8,33 @@
     margin: 0;
     box-sizing: inherit;
 }
+.site-header {
+  background: #333;      
+  color: #fff;            
+  padding: 15px 20px;     
+  display: flex;          
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.site-header nav ul {
+  list-style: none;      
+  display: flex;
+  gap: 15px;           
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
