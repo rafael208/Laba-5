@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Billy Herrington — Описание героя</title>
+    <style>
+        :root{
+            --bg:#0b1020;
+            --card:#0f1724;
+            --accent:#ff5b77;
+            --muted:#9aa4b2;
+            --glass: rgba(255,255,255,0.04);
+            --radius:14px;
+            font-family: Inter, Roboto, Arial, sans-serif;
+            color-scheme: dark;
+        }
+        html,body{height:100%;margin:0;background:linear-gradient(180deg,#071022 0%, #07142a 100%);display:flex;align-items:center;justify-content:center;padding:24px;}
+        .card{
+            width:100%;
+            max-width:920px;
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius:var(--radius);
+            padding:28px;
+            box-shadow: 0 8px 40px rgba(2,6,23,0.6);
+            display:grid;
+            grid-template-columns: 220px 1fr;
+            gap:22px;
+            align-items:start;
+            border:1px solid rgba(255,255,255,0.03);
+        }
+        .avatar{
+            width:220px;
+            height:220px;
+            border-radius:12px;
+            overflow:hidden;
+            background:var(--glass);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border:1px solid rgba(255,255,255,0.04);
+        }
+        .avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+        .meta{
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+        }
+        h1{margin:0;font-size:22px;color:#fff;letter-spacing:0.2px;}
+        .sub{color:var(--muted);font-size:13px;margin-bottom:8px;}
+        .badges{display:flex;gap:8px;flex-wrap:wrap;}
+        .badge{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,0.03);}
+        .desc{color:#dfe7ee;font-size:14px;line-height:1.5;padding-top:6px;}
+        .stats{margin-top:14px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+        .stat{background:var(--glass);padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);}
+        .stat b{display:block;color:#fff;font-size:15px;margin-bottom:6px;}
+        .bar{height:8px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden;}
+        .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#ff9bb0);border-radius:999px;}
+        .quote{margin-top:14px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.014), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-style:italic;}
+        .actions{display:flex;gap:10px;margin-top:14px;}
+        .btn{
+            padding:10px 14px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#e64b68);color:#fff;border:none;cursor:pointer;font-weight:600;
+            box-shadow:0 6px 18px rgba(245,91,119,0.14);
+        }
+        .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);box-shadow:none;}
+        @media (max-width:720px){
+            .card{grid-template-columns:1fr;max-width:520px;padding:18px;}
+            .avatar{width:160px;height:160px;margin:0 auto;}
+        }
+    </style>
+</head>
+<body>
+    <main class="card" role="main" aria-labelledby="hero-name">
+        <div>
+            <div class="avatar" aria-hidden="false">
+                <img src="assets/img/0.avatar.jpg" alt="Аватар героя">
+            </div>
+            <div class="meta" style="margin-top:12px">
+                <div class="badges">
+                    <span class="badge">Гачи-воин</span>
+                    <span class="badge">Роль: Боец</span>
+                    <span class="badge">Уровень: 28</span>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h1 id="hero-name">billy herrington</h1>
+            <div class="sub">Мощный и харизматичный персонаж из легенд гачи. Любит качалки, драму и искреннюю поддержку товарищей.</div>
+
+            <p class="desc">
+                billy herrington — прожжённый ветеран арены, всегда готов поддержать друзей и дать отпор врагам. Его сила воли и чувство юмора помогают выстоять в любой схватке. Одевается просто, но говорит прямо в сердце каждого союзника.
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <b>Сила</b>
+                    <div class="bar" aria-hidden="true"><i style="width:94%"></i></div>
+                </div>
+                <div class="stat">
+                    <b>Выносливость</b>
+                    <div class="bar" aria-hidden="true"><i style="width:88%"></i></div>
+                </div>
+                <div class="stat">
+                    <b>Харизма</b>
+                    <div class="bar" aria-hidden="true"><i style="width:96%"></i></div>
+                </div>
+                <div class="stat">
+                    <b>Техника</b>
+                    <div class="bar" aria-hidden="true"><i style="width:72%"></i></div>
+                </div>
+            </div>
+
+            <div class="quote">«Давай, бро — это наш момент. За тренировку и за честь!»</div>
+
+            <div class="actions">
+                <button class="btn" onclick="alert('Привет от Мистера Гачи!')">Поздороваться</button>
+                <button class="btn ghost" onclick="downloadCard()">Скачать карточку</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function downloadCard() {
+            // простая "функция" для демонстрации — можно расширить с html2canvas и т.д.
+            alert('Сохранение карточки пока недоступно в этой демо-версии.');
+        }
+    </script>
+</body>
+</html></div></p>
